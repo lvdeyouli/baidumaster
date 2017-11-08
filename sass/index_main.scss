@@ -1,0 +1,1329 @@
+@charset "UTF-8";
+@import "normalize";
+@import "../lib/swiper/swiper.min";
+@import "base";
+@function p2r($size) {
+   @return ($size/32)*1rem;
+}
+@mixin bgc($url,$w,$h) {
+  width: ($w/32)*1rem;
+  height: ($h/32)*1rem;
+  background: url($url) no-repeat center/100% 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: (-$w/32/2)*1rem;
+}
+// 直接设置背景图 不考虑居中
+@mixin bg($url) {
+  background: url($url) no-repeat center /100% 100%;
+  position: absolute;
+}
+//  设置 尺寸
+@mixin size($width,$height) {
+  width: p2r($width);
+  height: p2r($height);
+}
+// 在盒子中水平垂直居中
+@mixin box_center($url,$w,$h) {
+   @include bg($url);
+  @include size($w, $h);
+  left: 50%;
+  top: 0;
+  margin-left: p2r(-$w/2);
+}
+
+body,
+html {
+  height: 100%;
+  overflow: hidden;
+}
+// logo区块
+
+.loading {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ffece9;
+  z-index: 3;
+
+  .rider {
+    @include bg("../image/loading/rider1_.png");
+    @include size(154, 121);
+    left: p2r(400);
+    top: (233/32)*1rem;
+  }
+
+  .progress {
+    width: (416/32)*1rem;
+    height: (20/32)*1rem;
+    //background-color: #fe2d48;
+    border: (3/32)*1rem solid #373838;
+    border-radius: (20/32)*1rem;
+    position: absolute;
+    left: 50%;
+    top: (363/32)*1rem;
+    margin-left: (-416/32/2)*1rem;
+  }
+
+  .info {
+    @include bgc("../image/loading/loading-txt.png", 220, 28);
+    top: (414/32)*1rem;
+  }
+
+  .logo {
+    @include bgc("../image/loading/waimai-logo.png", 162, 39);
+    bottom: (120/32)*1rem;
+  }
+
+  .copyRight {
+    width: 100%;
+    position: absolute;
+    bottom: (72/32)*1rem;
+    font-size: (24/32)*1rem;
+    text-align: center;
+  }
+}
+//欢迎页面
+
+.welcome {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #00befd;
+  z-index: 2;
+  //标题
+  .theme_title {
+    @include bgc("../image/page1/theme-title.png", 397, 224);
+    top: (42/32)*1rem;
+
+    .hello {
+      width: (75/32)*1rem;
+      height: (70/32)*1rem;
+      background: url("../image/page1/hello.png") no-repeat center/100% 100%;
+      position: absolute;
+      right: (8/32)*1rem;
+      top: (20/32)*1rem;
+    }
+  }
+  //熊盒子
+  .rider_box {
+    width: (167/32)*1rem;
+    height: (179/32)*1rem;
+    position: absolute;
+    left: 50%;
+    margin-left: (-167/32/2)*1rem;
+    bottom: (346/32)*1rem;
+    z-index: 2;
+    transform: translateY(-150%);
+    opacity: 0;
+    //骑手
+    .welcome_rider {
+      @include bgc("../image/page1/rider2.png", 167, 279);
+      bottom: 0;
+    }
+    //灰尘
+    .jet {
+      @include bgc("../image/page1/jet1.png", 167, 32);
+      bottom: 0;
+    }
+  }
+
+  .clouds {
+    @include bgc("../image/page1/clouds.png", 640, 673);
+    bottom: 0;
+  }
+
+  .grass {
+    @include bgc("../image/page1/grass1.png", 640, 396);
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .trees {
+    @include bgc("../image/page1/trees.png", 599, 71);
+    bottom: (352/32)*1rem;
+    z-index: 4;
+  }
+
+  .small_grass {
+    width: (640/32)*1rem;
+    height: (228/32)*1rem;
+    background: url("../image/page1/grass2.png") no-repeat left/100% 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+  }
+
+  .circle {
+    @include bgc("../image/page1/circle1.png", 208, 208);
+    bottom: (86/32)*1rem;
+    z-index: 6;
+
+    .btn {
+      @include bgc("../image/page1/bear-btn-aft.png", 124, 113);
+      top: 50%;
+      margin-top: (-113/32/2)*1rem;
+    }
+
+    .circle_red {
+      @include bgc("../image/page1/circle2.png", 208, 208);
+      top: 50%;
+      margin-top: (-208/32/2)*1rem;
+    }
+  }
+}
+//内容区块
+
+.waimai-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  .title {
+    position: absolute;
+    color: #FFF;
+    left: p2r(32);
+    top: p2r(32);
+    padding-left: p2r(20);
+
+    h2 {
+      font-size: p2r(64);
+      margin-bottom: p2r(12);
+    }
+
+    p {
+      font-size: p2r(24);
+    }
+
+    .line {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: p2r(5);
+      height: 100%;
+      background-color: #FFF;
+    }
+  }
+
+  .page1 {
+    background-color: #BE8651;
+    // 第一个滚动页面
+    .scroll_page1 {
+      // 背景
+      .bg {
+        @include bgc("../image/page2/bg1.png", 576, 573);
+        @include size(576, 573);
+        bottom: p2r(252);
+      }
+      // 人物
+      .person {
+        @include bgc("../image/page2/front1.png", 439, 349);
+        @include size(439, 349);
+        bottom: p2r(290);
+        z-index: 1;
+      }
+
+      .message_container {
+        @include bg("../image/page2/txt-bubbl.png");
+        @include size(363, 119);
+        bottom: p2r(140);
+        right: p2r(140);
+        z-index: 2;
+
+        .info {
+          @include bgc("../image/page2/txt-work.png", 250, 31);
+          top: 50%;
+          margin-top: p2r(-31/2);
+        }
+      }
+    }
+    // 第二个滚动页面
+    .scroll_page2 {
+      // 背景
+      .bg {
+        @include bgc("../image/page2/bg2.png", 582, 520);
+        @include size(582, 520);
+        bottom: p2r(252);
+      }
+      // 人物
+      .person {
+        @include bgc("../image/page2/relax.png", 436, 332);
+        @include size(436, 332);
+        bottom: p2r(270);
+        z-index: 1;
+
+        .leg1 {
+          @include bg("../image/page2/leg1.png");
+          @include size(113, 24);
+          left: p2r(194);
+          bottom: p2r(110);
+        }
+
+        .leg2 {
+          @include bg("../image/page2/leg2.png");
+          @include size(85, 71);
+          left: p2r(193);
+          bottom: p2r(120);
+        }
+      }
+
+      .message_container {
+        @include bg("../image/page2/txt-bubbl.png");
+        @include size(363, 119);
+        bottom: p2r(140);
+        right: p2r(140);
+        z-index: 2;
+
+        .info {
+          @include bgc("../image/page2/txt-life.png", 224, 31);
+          top: 50%;
+          margin-top: p2r(-31/2);
+        }
+      }
+    }
+    // 第三个滚动页面
+    .scroll_page3 {
+      // 背景
+      .bg {
+        @include bgc("../image/page2/bg3.png", 561, 516);
+        @include size(561, 516);
+        bottom: p2r(270);
+      }
+      // 人物
+      .person {
+        @include bgc("../image/page2/person.png", 503, 299);
+        @include size(503, 299);
+        bottom: p2r(300);
+        z-index: 1;
+
+        .word1 {
+          @include bg("../image/page2/word1.png");
+          @include size(77, 70);
+          bottom: p2r(260);
+          left: p2r(7);
+        }
+
+        .word2 {
+          @include bg("../image/page2/word2.png");
+          @include size(115, 104);
+          bottom: p2r(315);
+          left: p2r(115);
+        }
+
+        .word3 {
+          @include bg("../image/page2/word3.png");
+          @include size(79, 32);
+          bottom: p2r(280);
+          right: p2r(130);
+        }
+
+        .word4 {
+          @include bg("../image/page2/word4.png");
+          @include size(92, 83);
+          bottom: p2r(290);
+          right: p2r(12);
+        }
+      }
+
+      .message_container {
+        @include bg("../image/page2/txt-bubbl.png");
+        @include size(363, 119);
+        bottom: p2r(140);
+        right: p2r(140);
+        z-index: 2;
+
+        .info {
+          @include bgc("../image/page2/txt-res.png", 220, 30);
+          top: 50%;
+          margin-top: p2r(-30/2);
+        }
+      }
+    }
+    // 星球
+    .sphere {
+      @include bgc("../image/page2/sphere1.png", 640, 356);
+      @include size(640, 356);
+      bottom: 0;
+    }
+    // 小熊
+    .Bear {
+      @include bg("../image/page2/bear1.png");
+      @include size(178, 143);
+      right: p2r(38);
+      bottom: 0;
+    }
+  }
+
+  .page2 {
+    background-color: #EE4143;
+    // 背景
+    .bg {
+      @include bgc("../image/page3/bg4_.png", 592, 490);
+      bottom: p2r(250);
+      z-index: 1;
+    }
+    // 小熊
+    .bear {
+      background: {
+        image: url("../image/page3/bear2.png");
+        size: p2r(368) p2r(427);
+        repeat: no-repeat;
+        position: p2r(-103) p2r(-96);
+      }
+      @include size(227, 336);
+      position: absolute;
+      bottom: p2r(310);
+      left: 50%;
+      margin-left: p2r(-227/2);
+      z-index: 1;
+      // 表情
+      .face1 {
+        @include bg("../image/page3/face1.png");
+        @include size(102, 102);
+        top: 0;
+        left: p2r(-102);
+      }
+      // 表情
+      .face2 {
+        @include bg("../image/page3/face2.png");
+        @include size(101, 102);
+        top: p2r(-102);
+        right: p2r(-101/2);
+      }
+      // 熊掌
+      .hand_left {
+        @include bg("../image/page3/hand-left_.png");
+        @include size(74, 77);
+        top: p2r(180);
+        left: p2r(30);
+      }
+
+      .hand_right {
+        @include bg("../image/page3/hand-right.png");
+        @include size(74, 77);
+        top: p2r(180);
+        right: p2r(30);
+      }
+    }
+    // 星球
+    .sphere {
+      @include bgc("../image/page3/sphere2.png", 640, 356);
+      @include size(640, 356);
+      bottom: 0;
+    }
+    // 桌子
+    .table {
+      @include bgc("../image/page3/table.png", 514, 258);
+      @include size(514, 258);
+      bottom: p2r(140);
+      z-index: 2;
+    }
+    // 食物
+    .foob {
+      @include bgc("../image/page3/foods.png", 354, 152);
+      @include size(354, 152);
+      bottom: p2r(330);
+      z-index: 3;
+    }
+  }
+
+  .page3 {
+    background-color: #DD8A03;
+    // 背景
+    .bg {
+      @include bgc("../image/page4/bg5.png", 592, 580);
+      bottom: p2r(300);
+      z-index: 1;
+    }
+    // 小熊
+    .bear {
+      @include bgc("../image/page4/bear3.png", 206, 321);
+      bottom: p2r(195);
+      z-index: 2;
+    }
+    // 星球
+    .sphere {
+      @include bgc("../image/page4/sphere3.png", 640, 356);
+      @include size(640, 356);
+      bottom: 0;
+    }
+    // 许可证
+    .license {
+      @include bg("../image/page4/license.png");
+      @include size(197, 140);
+      left: p2r(40);
+      bottom: p2r(500);
+      z-index: 3;
+    }
+    // 地沟油
+    .oil {
+      @include bg("../image/page4//oil.png");
+      @include size(205, 107);
+      left: p2r(225);
+      bottom: p2r(660);
+      z-index: 3;
+    }
+    // 黑外卖
+    .evil {
+      @include bg("../image/page4/evil2.png");
+      @include size(198, 163);
+      right: p2r(30);
+      bottom: p2r(480);
+      z-index: 3;
+    }
+  }
+
+  .page4 {
+    background-color: #3FA100;
+    // 背景
+    .bg {
+      @include bgc("../image/page5/bg6.png", 588, 333);
+      bottom: p2r(300);
+      z-index: 1;
+    }
+    // 小熊
+    .bear {
+      @include bgc("../image/page5/bear4.png", 206, 321);
+      bottom: p2r(170);
+      z-index: 2;
+    }
+    // 星球
+    .sphere {
+      @include bgc("../image/page5/sphere4.png", 640, 356);
+      @include size(640, 356);
+      bottom: 0;
+    }
+    // 卡片
+    .card1 {
+      @include bg("../image/page5/card1.png");
+      @include size(160, 175);
+      left: p2r(32);
+      bottom: p2r(435);
+    }
+    // 卡片
+    .card2 {
+      @include bg("../image/page5/card2.png");
+      @include size(161, 209);
+      left: p2r(240);
+      bottom: p2r(530);
+    }
+    // 卡片
+    .card3 {
+      @include bg("../image/page5/card3.png");
+      @include size(167, 184);
+      right: p2r(45);
+      bottom: p2r(420);
+    }
+  }
+
+  .page5 {
+    background-color: #0098CF;
+    // 背景
+    .bg {
+      @include bgc("../image/page6/bg7.png", 594, 493);
+      bottom: p2r(300);
+      z-index: 1;
+    }
+    // 小熊
+    .bear {
+      @include bgc("../image/page6/rider2.png", 230, 390);
+      bottom: p2r(175);
+      z-index: 2;
+    }
+    // 星球
+    .sphere {
+      @include bgc("../image/page6/sphere5.png", 640, 356);
+      @include size(640, 356);
+      bottom: 0;
+    }
+    // 云
+    .clouds {
+      @include bgc("../image/page6/weather-cloud.png", 432, 160);
+      @include size(432, 160);
+      top: p2r(240);
+    }
+  }
+
+  .page6 {
+    background-color: #B527A0;
+    // 背景
+    .bg {
+      @include bgc("../image/page7/bg8.png", 588, 333);
+      bottom: p2r(300);
+      z-index: 1;
+    }
+    // 小熊
+    .bear {
+      @include bgc("../image/page7/bear5.png", 285, 328);
+      bottom: p2r(200);
+      z-index: 2;
+
+      .gift1 {
+        @include box_center("../image/page7/gift1.png", 39, 25);
+        transform: rotateZ(28deg*1) translateY(p2r(240));
+      }
+
+      .gift2 {
+        @include box_center("../image/page7/gift2.png", 93, 79);
+        transform: rotateZ(28deg*2) translateY(p2r(240));
+      }
+
+      .gift3 {
+        @include box_center("../image/page7/gift3.png", 72, 64);
+        transform: rotateZ(28deg*3) translateY(p2r(240));
+      }
+
+      .gift4 {
+        @include box_center("../image/page7/gift4.png", 91, 73);
+        transform: rotateZ(28deg*4) translateY(p2r(240));
+      }
+
+      .gift5 {
+        @include box_center("../image/page7/gift5.png", 99, 65);
+        transform: rotateZ(28deg*5) translateY(p2r(240));
+      }
+
+      .gift6 {
+        @include box_center("../image/page7/gift6.png", 107, 80);
+        transform: rotateZ(28deg*6) translateY(p2r(240));
+      }
+
+      .gift7 {
+        @include box_center("../image/page7/gift7.png", 107, 80);
+        transform: rotateZ(28deg*7) translateY(p2r(240));
+      }
+
+      .gift8 {
+        @include box_center("../image/page7/gift8.png", 88, 64);
+        transform: rotateZ(28deg*8) translateY(p2r(240));
+      }
+
+      .gift9 {
+        @include box_center("../image/page7/gift9.png", 78, 50);
+        transform: rotateZ(28deg*9) translateY(p2r(240));
+      }
+
+      .gift10 {
+        @include box_center("../image/page7/gift10.png", 49, 37);
+        transform: rotateZ(28deg*10) translateY(p2r(240));
+      }
+
+      .gift11 {
+        @include box_center("../image/page7/gift11.png", 51, 31);
+        transform: rotateZ(28deg*11) translateY(p2r(240));
+      }
+
+      .gift12 {
+        @include box_center("../image/page7/gift12.png", 37, 23);
+        transform: rotateZ(28deg*12) translateY(p2r(240));
+      }
+    }
+    // 星球
+    .sphere {
+      @include bgc("../image/page7/sphere6.png", 640, 356);
+      @include size(640, 356);
+      bottom: 0;
+    }
+  }
+
+  .page7 {
+    background-color: #19072A;
+    // 路灯
+    .streetlight {
+      @include bg("../image/page8/streetlight.png");
+      @include size(80, 443);
+      left: p2r(240);
+      bottom: p2r(300);
+      z-index: 1;
+
+      .light {
+        @include bg("../image/page8/lamplight.png");
+        @include size(437, 427);
+        top: p2r(10);
+        left: p2r(-140);
+      }
+    }
+    // 小熊
+    .bear {
+      @include bg("../image/page8/bear6.png");
+      @include size(276, 271);
+      bottom: p2r(280);
+      left: p2r(250);
+      z-index: 2;
+    }
+    // 摩托车
+    .motobike {
+      @include bg("../image/page8/moto.png");
+      @include size(200, 137);
+      bottom: p2r(275);
+      left: p2r(115);
+      z-index: 3;
+    }
+    // 分享
+    .share {
+      @include bgc("../image/page8/share.png", 379, 133);
+      @include size(379, 133);
+      bottom: p2r(140);
+      z-index: 4;
+    }
+    // 信息
+    .info {
+      position: absolute;
+      bottom: p2r(70);
+      width: 100%;
+      text-align: center;
+      font-size: p2r(24);
+      z-index: 5;
+      color: #b579d6;
+    }
+    // 星球
+    .sphere {
+      @include bgc("../image/page8/sphere7.png", 640, 384);
+      @include size(640, 384);
+      bottom: 0;
+    }
+  }
+}
+//动画区块
+// 加载页面的动画效果
+
+.loading {
+  .progress {
+    .rate {
+      position: absolute;
+      width: 30%;
+      height: 100%;
+      background-color: red;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.loading.animate {
+  .rider {
+    animation: loading_rider 2s 0.5s linear forwards;
+  }
+
+  .progress {
+    .rate {
+      animation: loading_rate 2s 0.5s linear forwards;
+    }
+  }
+}
+@keyframes loading_rider {
+  0% {
+    transform: translateX(p2r(-28*0)) translateY(0);
+  }
+
+  10% {
+    transform: translateX(p2r(-28*1)) translateY(-10%);
+  }
+
+  20% {
+    transform: translateX(p2r(-28*2)) translateY(0);
+  }
+
+  30% {
+    transform: translateX(p2r(-28*3)) translateY(-10%);
+  }
+
+  40% {
+    transform: translateX(p2r(-28*4)) translateY(0);
+  }
+
+  50% {
+    transform: translateX(p2r(-28*5)) translateY(-10%);
+  }
+
+  60% {
+    transform: translateX(p2r(-28*6)) translateY(0);
+  }
+
+  70% {
+    transform: translateX(p2r(-28*7)) translateY(-10%);
+  }
+
+  80% {
+    transform: translateX(p2r(-28*8)) translateY(0);
+  }
+
+  90% {
+    transform: translateX(p2r(-28*9)) translateY(-10%);
+  }
+
+  100% {
+    transform: translateX(p2r(-280)) translateY(0);
+  }
+}
+@keyframes loading_rate {
+  from {
+    width: 30%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+// 加载页面的动画效果结束
+// 欢迎页面的动画效果
+
+.welcome.animate {
+  .grass {
+    animation: welcome_grass 0.5s linear forwards;
+  }
+
+  .small_grass {
+    opacity: 0;
+    animation: welcome_small_grass 0.5s 0.5s linear forwards;
+  }
+
+  .trees {
+    opacity: 0;
+    animation: welcome_trees 0.8s 1s linear forwards;
+  }
+
+  .circle {
+    opacity: 0;
+    animation: welcome_circle 0.5s 1.8s linear forwards;
+
+    .circle_red {
+      animation: welcome_circle_red 0.5s 1.8s linear infinite;
+    }
+  }
+
+  .rider_box {
+    transition: all 0.5s 2.3s linear;
+    opacity: 1;
+    transform: translateY(0);
+
+    .welcome_rider {
+      animation: welcome_rider 0.5s 2.8s linear infinite;
+    }
+
+    .jet {
+      opacity: 0;
+      animation: welcome_jet 0.5s 2.8s linear infinite;
+    }
+  }
+
+  .clouds {
+    opacity: 0;
+    animation: welcome_clouds 0.5s 3.3s linear forwards;
+  }
+
+  .theme_title {
+    opacity: 0;
+    animation: welcome_title 0.5s 3.8s linear forwards;
+
+    .hello {
+      opacity: 0;
+      animation: wlecome_hello 0.5s 4.2s linear forwards;
+    }
+  }
+}
+// 草地动画
+@keyframes welcome_grass {
+  0% {
+    transform: translateY(80%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+// 小草动画
+@keyframes welcome_small_grass {
+  0% {
+    opacity: 0;
+    transform: scale(2,1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1,1);
+  }
+}
+// 树动画
+@keyframes welcome_trees {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+
+  70% {
+    opacity: 0.8;
+    transform: translateY(-20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+//按钮盒子动画
+@keyframes welcome_circle {
+  0% {
+    opacity: 0;
+    transform: scale(0,0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1,1);
+  }
+}
+//按钮边框动画
+@keyframes welcome_circle_red {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+//小熊盒子动画
+@keyframes welcome_rider_box {
+  0% {
+    opacity: 0;
+    transform: translateY(-150%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+//小熊动画
+@keyframes welcome_rider {
+  0% {
+    transform: translateY(-20%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+//灰尘动画
+@keyframes welcome_jet {
+  0% {
+    opacity: 0;
+    transform: scale(0,0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1,1);
+  }
+}
+//运动画
+@keyframes welcome_clouds {
+  0% {
+    opacity: 0;
+    transform: translateY(-80%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+//标题动画
+@keyframes welcome_title {
+  0% {
+    opacity: 0;
+    transform: translateY(-80%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+//hello动画
+@keyframes wlecome_hello {
+  0% {
+    opacity: 0;
+    transform: scale(0,0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1,1);
+  }
+}
+// 内容区域动画
+// page1页面动画
+
+.page1.animate {
+  .scroll_page1 {
+    .bg {
+      opacity: 0;
+      animation: page1_rotate 0.5s linear forwards,page1_rotate2 0.5s 1.5s linear forwards;
+    }
+
+    .person {
+      opacity: 0;
+      animation: page1_rotate 0.5s 0.3s linear forwards,page1_rotate2 0.5s 1.8s linear forwards;
+    }
+
+    .message_container {
+      opacity: 0;
+      animation: page1_text 0.5s 0.3s linear forwards,page1_text2 0.5s 1.8s linear forwards;
+    }
+  }
+
+  .scroll_page2 {
+    .bg {
+      opacity: 0;
+      animation: page1_rotate 0.5s 1.5s linear forwards,page1_rotate2 0.5s 3s linear forwards;
+    }
+
+    .person {
+      opacity: 0;
+      animation: page1_rotate 0.5s 1.8s linear forwards,page1_rotate2 0.5s 3.3s linear forwards;
+    }
+
+    .message_container {
+      opacity: 0;
+      animation: page1_text 0.5s 2.3s linear forwards,page1_text2 0.5s 3.3s linear forwards;
+    }
+  }
+
+  .scroll_page3 {
+    .bg {
+      opacity: 0;
+      animation: page1_rotate 0.5s 3s linear forwards;
+    }
+
+    .person {
+      opacity: 0;
+      animation: page1_rotate 0.5s 3.3s linear forwards;
+    }
+
+    .word1 {
+      animation: page1_shake 0.3s linear infinite;
+    }
+
+    .word2 {
+      animation: page1_shake 0.3s linear infinite;
+    }
+
+    .word3 {
+      animation: page1_shake 0.3s linear infinite;
+    }
+
+    .word4 {
+      animation: page1_shake 0.3s linear infinite;
+    }
+
+    .message_container {
+      opacity: 0;
+      animation: page1_text 0.5s 3.8s linear forwards;
+    }
+  }
+}
+// page1旋转动画
+@keyframes page1_rotate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg);
+    transform-origin: center 250%;
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+    transform-origin: center 250%;
+  }
+}
+//page1旋转动画2
+@keyframes page1_rotate2 {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+    transform-origin: center 250%;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(-45deg);
+    transform-origin: center 250%;
+  }
+}
+//page1抖动动画
+@keyframes page1_shake {
+  0% {
+    transform: translateY(-5%);
+  }
+
+  100% {
+    transform: translateY(5%);
+  }
+}
+//page1文本旋转动画
+@keyframes page1_text {
+  0% {
+    opacity: 0;
+    transform: rotate(90deg);
+    transform-origin: right bottom;
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(-10deg);
+    transform-origin: right bottom;
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+    transform-origin: right bottom;
+  }
+}
+//page1文本旋转动画2
+@keyframes page1_text2 {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+    transform-origin: right bottom;
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(10deg);
+    transform-origin: right bottom;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(-90deg);
+    transform-origin: right bottom;
+  }
+}
+//page2页面动画效果
+
+.page2.animate {
+  .bg {
+    animation: page1_rotate 0.5s linear forwards;
+  }
+
+  .table {
+    opacity: 0;
+    animation: page2_dropOut 0.5s 0.5s linear forwards;
+  }
+
+  .bear {
+    opacity: 0;
+    animation: page2_up 0.5s 1s linear forwards;
+
+    .face1 {
+      opacity: 0;
+      animation: page2_scale 1s 1.5s linear forwards;
+    }
+
+    .face2 {
+      opacity: 0;
+      animation: page2_scale 1s 1.5s linear forwards;
+    }
+
+    .hand_left {
+      animation: page2_shake 0.2s linear infinite;
+    }
+
+    .hand_right {
+      animation: page2_shake 0.2s 0.3s linear infinite;
+    }
+  }
+
+  .foob {
+    opacity: 0;
+    animation: page2_dropOut 0.5s 1s linear forwards;
+  }
+}
+//page2掉落动画效果
+@keyframes page2_dropOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-200%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+//page2上升动画效果
+@keyframes page2_up {
+  0% {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+// page2缩放动画
+@keyframes page2_scale {
+  0% {
+    opacity: 0;
+    transform: scale(0,0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2,1.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1,1);
+  }
+}
+//page2手抖动效果
+@keyframes page2_shake {
+  0% {
+    transform: translateY(-5%);
+  }
+
+  100% {
+    transform: translateY(5%);
+  }
+}
+//page3页面动画效果
+
+.page3.animate {
+  .bg {
+    animation: page1_rotate 0.5s linear forwards;
+  }
+
+  .bear {
+    opacity: 0;
+    animation: page2_dropOut 0.5s 0.5s linear forwards;
+  }
+
+  .license {
+    opacity: 0;
+    animation: page2_scale 1s 1.5s linear forwards;
+  }
+
+  .oil {
+    opacity: 0;
+    animation: page2_scale 1s 1.5s linear forwards;
+  }
+
+  .evil {
+    opacity: 0;
+    animation: page2_scale 1s 1.5s linear forwards;
+  }
+}
+
+.page3.active {
+  .bear {
+    animation: page3_active 3s steps(1) forwards;
+  }
+
+  .license {
+    animation: page3_active1 1s 0s steps(1) forwards,page3_out 1s 3.5s forwards,page3_show_hide 1s 5s forwards;
+  }
+
+  .oil {
+    animation: page3_active2 2s 0s steps(1) forwards,page3_out 1s 3.5s forwards,page3_show_hide 1s 5s forwards;
+  }
+
+  .evil {
+    animation: page3_active3 3s 0s steps(1) forwards,page3_out 1s 3.5s forwards,page3_show_hide 1s 5s forwards;
+  }
+}
+//page3动画效果
+@keyframes page3_active {
+  0% {
+    opacity: 1;
+    background-image: url('../image/page4/bear3.png');
+  }
+
+  33% {
+    opacity: 1;
+    background-image: url('../image/page4/bear3-1-1.png');
+  }
+
+  66% {
+    opacity: 1;
+    background-image: url('../image/page4/bear3-2-1.png');
+  }
+
+  100% {
+    opacity: 1;
+    background-image: url('../image/page4/bear3-3-1.png');
+  }
+}
+@keyframes page3_active1 {
+  form {
+    opacity: 1;
+    background-image: url('../image/page4/license.png');
+  }
+
+  to {
+    opacity: 1;
+    background-image: url('../image/page4/license1.png');
+  }
+}
+@keyframes page3_active2 {
+  form {
+    opacity: 1;
+    background-image: url('../image/page4/evil2.png');
+  }
+
+  to {
+    opacity: 1;
+    background-image: url('../image/page4/evil21.png');
+  }
+}
+@keyframes page3_active3 {
+  form {
+    opacity: 1;
+    background-image: url('../image/page4/oil.png');
+  }
+
+  to {
+    opacity: 1;
+    background-image: url('../image/page4/oil1.png');
+  }
+}
+@keyframes page3_out {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  100% {
+    // opacity: 0;
+    transform: translateY(300%);
+  }
+}
+@keyframes page3_show_hide {
+  0% {
+    opacity: 0;
+    transform: scale(0,0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.5,1.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0,0);
+  }
+}

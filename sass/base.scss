@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  //手指触摸高亮效果,一般设置为透明
+   -webkit-tap-highlight-color: transparent;
+}
+
+ul,ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix::before,
+.clearfix::after{
+  content:'';
+  display: block;
+  line-height: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix{
+  // 移动端这里可以省略
+  zoom: 1;
+}

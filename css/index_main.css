@@ -1,0 +1,2064 @@
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block; }
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none; }
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none; }
+
+/**
+ * Swiper 3.4.1
+ * Most modern mobile touch slider and framework with hardware accelerated transitions
+ * 
+ * http://www.idangero.us/swiper/
+ * 
+ * Copyright 2016, Vladimir Kharlampidi
+ * The iDangero.us
+ * http://www.idangero.us/
+ * 
+ * Licensed under MIT
+ * 
+ * Released on: December 13, 2016
+ */
+.swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1; }
+
+.swiper-container-no-flexbox .swiper-slide {
+  float: left; }
+
+.swiper-container-vertical > .swiper-wrapper {
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -ms-transition-property: -ms-transform;
+  transition-property: transform;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
+
+.swiper-container-android .swiper-slide, .swiper-wrapper {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.swiper-container-multirow > .swiper-wrapper {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.swiper-container-free-mode > .swiper-wrapper {
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  margin: 0 auto; }
+
+.swiper-slide {
+  -webkit-flex-shrink: 0;
+  -ms-flex: 0 0 auto;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.swiper-container-autoheight, .swiper-container-autoheight .swiper-slide {
+  height: auto; }
+
+.swiper-container-autoheight .swiper-wrapper {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-transition-property: -webkit-transform,height;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -ms-transition-property: -ms-transform;
+  transition-property: transform,height; }
+
+.swiper-container .swiper-notification {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  opacity: 0;
+  z-index: -1000; }
+
+.swiper-wp8-horizontal {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y; }
+
+.swiper-wp8-vertical {
+  -ms-touch-action: pan-x;
+  touch-action: pan-x; }
+
+.swiper-button-next, .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  width: 27px;
+  height: 44px;
+  margin-top: -22px;
+  z-index: 10;
+  cursor: pointer;
+  -moz-background-size: 27px 44px;
+  -webkit-background-size: 27px 44px;
+  background-size: 27px 44px;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+  opacity: .35;
+  cursor: auto;
+  pointer-events: none; }
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
+  left: 10px;
+  right: auto; }
+
+.swiper-button-prev.swiper-button-black, .swiper-container-rtl .swiper-button-next.swiper-button-black {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E"); }
+
+.swiper-button-prev.swiper-button-white, .swiper-container-rtl .swiper-button-next.swiper-button-white {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E"); }
+
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
+  right: 10px;
+  left: auto; }
+
+.swiper-button-next.swiper-button-black, .swiper-container-rtl .swiper-button-prev.swiper-button-black {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E"); }
+
+.swiper-button-next.swiper-button-white, .swiper-container-rtl .swiper-button-prev.swiper-button-white {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E"); }
+
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  z-index: 10; }
+
+.swiper-pagination.swiper-pagination-hidden {
+  opacity: 0; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 10px;
+  left: 0;
+  width: 100%; }
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #000;
+  opacity: .2; }
+
+button.swiper-pagination-bullet {
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  appearance: none; }
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer; }
+
+.swiper-pagination-white .swiper-pagination-bullet {
+  background: #fff; }
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #007aff; }
+
+.swiper-pagination-white .swiper-pagination-bullet-active {
+  background: #fff; }
+
+.swiper-pagination-black .swiper-pagination-bullet-active {
+  background: #000; }
+
+.swiper-container-vertical > .swiper-pagination-bullets {
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translate3d(0, -50%, 0);
+  -moz-transform: translate3d(0, -50%, 0);
+  -o-transform: translate(0, -50%);
+  -ms-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0); }
+
+.swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 5px 0;
+  display: block; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 5px; }
+
+.swiper-pagination-progress {
+  background: rgba(0, 0, 0, 0.25);
+  position: absolute; }
+
+.swiper-pagination-progress .swiper-pagination-progressbar {
+  background: #007aff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  transform-origin: left top; }
+
+.swiper-container-rtl .swiper-pagination-progress .swiper-pagination-progressbar {
+  -webkit-transform-origin: right top;
+  -moz-transform-origin: right top;
+  -ms-transform-origin: right top;
+  -o-transform-origin: right top;
+  transform-origin: right top; }
+
+.swiper-container-horizontal > .swiper-pagination-progress {
+  width: 100%;
+  height: 4px;
+  left: 0;
+  top: 0; }
+
+.swiper-container-vertical > .swiper-pagination-progress {
+  width: 4px;
+  height: 100%;
+  left: 0;
+  top: 0; }
+
+.swiper-pagination-progress.swiper-pagination-white {
+  background: rgba(255, 255, 255, 0.5); }
+
+.swiper-pagination-progress.swiper-pagination-white .swiper-pagination-progressbar {
+  background: #fff; }
+
+.swiper-pagination-progress.swiper-pagination-black .swiper-pagination-progressbar {
+  background: #000; }
+
+.swiper-container-3d {
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  -o-perspective: 1200px;
+  perspective: 1200px; }
+
+.swiper-container-3d .swiper-cube-shadow, .swiper-container-3d .swiper-slide, .swiper-container-3d .swiper-slide-shadow-bottom, .swiper-container-3d .swiper-slide-shadow-left, .swiper-container-3d .swiper-slide-shadow-right, .swiper-container-3d .swiper-slide-shadow-top, .swiper-container-3d .swiper-wrapper {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+
+.swiper-container-3d .swiper-slide-shadow-bottom, .swiper-container-3d .swiper-slide-shadow-left, .swiper-container-3d .swiper-slide-shadow-right, .swiper-container-3d .swiper-slide-shadow-top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10; }
+
+.swiper-container-3d .swiper-slide-shadow-left {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(transparent));
+  background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.5), transparent);
+  background-image: -moz-linear-gradient(right, rgba(0, 0, 0, 0.5), transparent);
+  background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.5), transparent);
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), transparent); }
+
+.swiper-container-3d .swiper-slide-shadow-right {
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(transparent));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), transparent);
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), transparent);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), transparent);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent); }
+
+.swiper-container-3d .swiper-slide-shadow-top {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent));
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5), transparent);
+  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.5), transparent);
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), transparent);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent); }
+
+.swiper-container-3d .swiper-slide-shadow-bottom {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(transparent));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent); }
+
+.swiper-container-coverflow .swiper-wrapper, .swiper-container-flip .swiper-wrapper {
+  -ms-perspective: 1200px; }
+
+.swiper-container-cube, .swiper-container-flip {
+  overflow: visible; }
+
+.swiper-container-cube .swiper-slide, .swiper-container-flip .swiper-slide {
+  pointer-events: none;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 1; }
+
+.swiper-container-cube .swiper-slide .swiper-slide, .swiper-container-flip .swiper-slide .swiper-slide {
+  pointer-events: none; }
+
+.swiper-container-cube .swiper-slide-active, .swiper-container-cube .swiper-slide-active .swiper-slide-active, .swiper-container-flip .swiper-slide-active, .swiper-container-flip .swiper-slide-active .swiper-slide-active {
+  pointer-events: auto; }
+
+.swiper-container-cube .swiper-slide-shadow-bottom, .swiper-container-cube .swiper-slide-shadow-left, .swiper-container-cube .swiper-slide-shadow-right, .swiper-container-cube .swiper-slide-shadow-top, .swiper-container-flip .swiper-slide-shadow-bottom, .swiper-container-flip .swiper-slide-shadow-left, .swiper-container-flip .swiper-slide-shadow-right, .swiper-container-flip .swiper-slide-shadow-top {
+  z-index: 0;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.swiper-container-cube .swiper-slide {
+  visibility: hidden;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  width: 100%;
+  height: 100%; }
+
+.swiper-container-cube.swiper-container-rtl .swiper-slide {
+  -webkit-transform-origin: 100% 0;
+  -moz-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0; }
+
+.swiper-container-cube .swiper-slide-active, .swiper-container-cube .swiper-slide-next, .swiper-container-cube .swiper-slide-next + .swiper-slide, .swiper-container-cube .swiper-slide-prev {
+  pointer-events: auto;
+  visibility: visible; }
+
+.swiper-container-cube .swiper-cube-shadow {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .6;
+  -webkit-filter: blur(50px);
+  filter: blur(50px);
+  z-index: 0; }
+
+.swiper-container-fade.swiper-container-free-mode .swiper-slide {
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.swiper-container-fade .swiper-slide {
+  pointer-events: none;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity; }
+
+.swiper-container-fade .swiper-slide .swiper-slide {
+  pointer-events: none; }
+
+.swiper-container-fade .swiper-slide-active, .swiper-container-fade .swiper-slide-active .swiper-slide-active {
+  pointer-events: auto; }
+
+.swiper-zoom-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  text-align: center; }
+
+.swiper-zoom-container > canvas, .swiper-zoom-container > img, .swiper-zoom-container > svg {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; }
+
+.swiper-scrollbar {
+  border-radius: 10px;
+  position: relative;
+  -ms-touch-action: none;
+  background: rgba(0, 0, 0, 0.1); }
+
+.swiper-container-horizontal > .swiper-scrollbar {
+  position: absolute;
+  left: 1%;
+  bottom: 3px;
+  z-index: 50;
+  height: 5px;
+  width: 98%; }
+
+.swiper-container-vertical > .swiper-scrollbar {
+  position: absolute;
+  right: 3px;
+  top: 1%;
+  z-index: 50;
+  width: 5px;
+  height: 98%; }
+
+.swiper-scrollbar-drag {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  left: 0;
+  top: 0; }
+
+.swiper-scrollbar-cursor-drag {
+  cursor: move; }
+
+.swiper-lazy-preloader {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -21px;
+  margin-top: -21px;
+  z-index: 10;
+  -webkit-transform-origin: 50%;
+  -moz-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-animation: swiper-preloader-spin 1s steps(12, end) infinite;
+  -moz-animation: swiper-preloader-spin 1s steps(12, end) infinite;
+  animation: swiper-preloader-spin 1s steps(12, end) infinite; }
+
+.swiper-lazy-preloader:after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%236c6c6c'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-position: 50%;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat; }
+
+.swiper-lazy-preloader-white:after {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%23fff'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
+
+@-webkit-keyframes swiper-preloader-spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes swiper-preloader-spin {
+  100% {
+    transform: rotate(360deg); } }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; }
+
+ul, ol {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: block;
+  line-height: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clearfix {
+  zoom: 1; }
+
+body,
+html {
+  height: 100%;
+  overflow: hidden; }
+
+.loading {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ffece9;
+  z-index: 3; }
+  .loading .rider {
+    background: url("../image/loading/rider1_.png") no-repeat center/100% 100%;
+    position: absolute;
+    width: 4.8125rem;
+    height: 3.78125rem;
+    left: 12.5rem;
+    top: 7.28125rem; }
+  .loading .progress {
+    width: 13rem;
+    height: 0.625rem;
+    border: 0.09375rem solid #373838;
+    border-radius: 0.625rem;
+    position: absolute;
+    left: 50%;
+    top: 11.34375rem;
+    margin-left: -6.5rem; }
+  .loading .info {
+    width: 6.875rem;
+    height: 0.875rem;
+    background: url("../image/loading/loading-txt.png") no-repeat center/100% 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -3.4375rem;
+    top: 12.9375rem; }
+  .loading .logo {
+    width: 5.0625rem;
+    height: 1.21875rem;
+    background: url("../image/loading/waimai-logo.png") no-repeat center/100% 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -2.53125rem;
+    bottom: 3.75rem; }
+  .loading .copyRight {
+    width: 100%;
+    position: absolute;
+    bottom: 2.25rem;
+    font-size: 0.75rem;
+    text-align: center; }
+
+.welcome {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #00befd;
+  z-index: 2; }
+  .welcome .theme_title {
+    width: 12.40625rem;
+    height: 7rem;
+    background: url("../image/page1/theme-title.png") no-repeat center/100% 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -6.20313rem;
+    top: 1.3125rem; }
+    .welcome .theme_title .hello {
+      width: 2.34375rem;
+      height: 2.1875rem;
+      background: url("../image/page1/hello.png") no-repeat center/100% 100%;
+      position: absolute;
+      right: 0.25rem;
+      top: 0.625rem; }
+  .welcome .rider_box {
+    width: 5.21875rem;
+    height: 5.59375rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -2.60938rem;
+    bottom: 10.8125rem;
+    z-index: 2;
+    transform: translateY(-150%);
+    opacity: 0; }
+    .welcome .rider_box .welcome_rider {
+      width: 5.21875rem;
+      height: 8.71875rem;
+      background: url("../image/page1/rider2.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -2.60938rem;
+      bottom: 0; }
+    .welcome .rider_box .jet {
+      width: 5.21875rem;
+      height: 1rem;
+      background: url("../image/page1/jet1.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -2.60938rem;
+      bottom: 0; }
+  .welcome .clouds {
+    width: 20rem;
+    height: 21.03125rem;
+    background: url("../image/page1/clouds.png") no-repeat center/100% 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -10rem;
+    bottom: 0; }
+  .welcome .grass {
+    width: 20rem;
+    height: 12.375rem;
+    background: url("../image/page1/grass1.png") no-repeat center/100% 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -10rem;
+    bottom: 0;
+    z-index: 1; }
+  .welcome .trees {
+    width: 18.71875rem;
+    height: 2.21875rem;
+    background: url("../image/page1/trees.png") no-repeat center/100% 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -9.35938rem;
+    bottom: 11rem;
+    z-index: 4; }
+  .welcome .small_grass {
+    width: 20rem;
+    height: 7.125rem;
+    background: url("../image/page1/grass2.png") no-repeat left/100% 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 5; }
+  .welcome .circle {
+    width: 6.5rem;
+    height: 6.5rem;
+    background: url("../image/page1/circle1.png") no-repeat center/100% 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -3.25rem;
+    bottom: 2.6875rem;
+    z-index: 6; }
+    .welcome .circle .btn {
+      width: 3.875rem;
+      height: 3.53125rem;
+      background: url("../image/page1/bear-btn-aft.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -1.9375rem;
+      top: 50%;
+      margin-top: -1.76563rem; }
+    .welcome .circle .circle_red {
+      width: 6.5rem;
+      height: 6.5rem;
+      background: url("../image/page1/circle2.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -3.25rem;
+      top: 50%;
+      margin-top: -3.25rem; }
+
+.waimai-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0; }
+  .waimai-container .title {
+    position: absolute;
+    color: #FFF;
+    left: 1rem;
+    top: 1rem;
+    padding-left: 0.625rem; }
+    .waimai-container .title h2 {
+      font-size: 2rem;
+      margin-bottom: 0.375rem; }
+    .waimai-container .title p {
+      font-size: 0.75rem; }
+    .waimai-container .title .line {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0.15625rem;
+      height: 100%;
+      background-color: #FFF; }
+  .waimai-container .page1 {
+    background-color: #BE8651; }
+    .waimai-container .page1 .scroll_page1 .bg {
+      width: 18rem;
+      height: 17.90625rem;
+      background: url("../image/page2/bg1.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -9rem;
+      width: 18rem;
+      height: 17.90625rem;
+      bottom: 7.875rem; }
+    .waimai-container .page1 .scroll_page1 .person {
+      width: 13.71875rem;
+      height: 10.90625rem;
+      background: url("../image/page2/front1.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -6.85938rem;
+      width: 13.71875rem;
+      height: 10.90625rem;
+      bottom: 9.0625rem;
+      z-index: 1; }
+    .waimai-container .page1 .scroll_page1 .message_container {
+      background: url("../image/page2/txt-bubbl.png") no-repeat center/100% 100%;
+      position: absolute;
+      width: 11.34375rem;
+      height: 3.71875rem;
+      bottom: 4.375rem;
+      right: 4.375rem;
+      z-index: 2; }
+      .waimai-container .page1 .scroll_page1 .message_container .info {
+        width: 7.8125rem;
+        height: 0.96875rem;
+        background: url("../image/page2/txt-work.png") no-repeat center/100% 100%;
+        position: absolute;
+        left: 50%;
+        margin-left: -3.90625rem;
+        top: 50%;
+        margin-top: -0.48438rem; }
+    .waimai-container .page1 .scroll_page2 .bg {
+      width: 18.1875rem;
+      height: 16.25rem;
+      background: url("../image/page2/bg2.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -9.09375rem;
+      width: 18.1875rem;
+      height: 16.25rem;
+      bottom: 7.875rem; }
+    .waimai-container .page1 .scroll_page2 .person {
+      width: 13.625rem;
+      height: 10.375rem;
+      background: url("../image/page2/relax.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -6.8125rem;
+      width: 13.625rem;
+      height: 10.375rem;
+      bottom: 8.4375rem;
+      z-index: 1; }
+      .waimai-container .page1 .scroll_page2 .person .leg1 {
+        background: url("../image/page2/leg1.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 3.53125rem;
+        height: 0.75rem;
+        left: 6.0625rem;
+        bottom: 3.4375rem; }
+      .waimai-container .page1 .scroll_page2 .person .leg2 {
+        background: url("../image/page2/leg2.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 2.65625rem;
+        height: 2.21875rem;
+        left: 6.03125rem;
+        bottom: 3.75rem; }
+    .waimai-container .page1 .scroll_page2 .message_container {
+      background: url("../image/page2/txt-bubbl.png") no-repeat center/100% 100%;
+      position: absolute;
+      width: 11.34375rem;
+      height: 3.71875rem;
+      bottom: 4.375rem;
+      right: 4.375rem;
+      z-index: 2; }
+      .waimai-container .page1 .scroll_page2 .message_container .info {
+        width: 7rem;
+        height: 0.96875rem;
+        background: url("../image/page2/txt-life.png") no-repeat center/100% 100%;
+        position: absolute;
+        left: 50%;
+        margin-left: -3.5rem;
+        top: 50%;
+        margin-top: -0.48438rem; }
+    .waimai-container .page1 .scroll_page3 .bg {
+      width: 17.53125rem;
+      height: 16.125rem;
+      background: url("../image/page2/bg3.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -8.76563rem;
+      width: 17.53125rem;
+      height: 16.125rem;
+      bottom: 8.4375rem; }
+    .waimai-container .page1 .scroll_page3 .person {
+      width: 15.71875rem;
+      height: 9.34375rem;
+      background: url("../image/page2/person.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -7.85938rem;
+      width: 15.71875rem;
+      height: 9.34375rem;
+      bottom: 9.375rem;
+      z-index: 1; }
+      .waimai-container .page1 .scroll_page3 .person .word1 {
+        background: url("../image/page2/word1.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 2.40625rem;
+        height: 2.1875rem;
+        bottom: 8.125rem;
+        left: 0.21875rem; }
+      .waimai-container .page1 .scroll_page3 .person .word2 {
+        background: url("../image/page2/word2.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 3.59375rem;
+        height: 3.25rem;
+        bottom: 9.84375rem;
+        left: 3.59375rem; }
+      .waimai-container .page1 .scroll_page3 .person .word3 {
+        background: url("../image/page2/word3.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 2.46875rem;
+        height: 1rem;
+        bottom: 8.75rem;
+        right: 4.0625rem; }
+      .waimai-container .page1 .scroll_page3 .person .word4 {
+        background: url("../image/page2/word4.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 2.875rem;
+        height: 2.59375rem;
+        bottom: 9.0625rem;
+        right: 0.375rem; }
+    .waimai-container .page1 .scroll_page3 .message_container {
+      background: url("../image/page2/txt-bubbl.png") no-repeat center/100% 100%;
+      position: absolute;
+      width: 11.34375rem;
+      height: 3.71875rem;
+      bottom: 4.375rem;
+      right: 4.375rem;
+      z-index: 2; }
+      .waimai-container .page1 .scroll_page3 .message_container .info {
+        width: 6.875rem;
+        height: 0.9375rem;
+        background: url("../image/page2/txt-res.png") no-repeat center/100% 100%;
+        position: absolute;
+        left: 50%;
+        margin-left: -3.4375rem;
+        top: 50%;
+        margin-top: -0.46875rem; }
+    .waimai-container .page1 .sphere {
+      width: 20rem;
+      height: 11.125rem;
+      background: url("../image/page2/sphere1.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -10rem;
+      width: 20rem;
+      height: 11.125rem;
+      bottom: 0; }
+    .waimai-container .page1 .Bear {
+      background: url("../image/page2/bear1.png") no-repeat center/100% 100%;
+      position: absolute;
+      width: 5.5625rem;
+      height: 4.46875rem;
+      right: 1.1875rem;
+      bottom: 0; }
+  .waimai-container .page2 {
+    background-color: #EE4143; }
+    .waimai-container .page2 .bg {
+      width: 18.5rem;
+      height: 15.3125rem;
+      background: url("../image/page3/bg4_.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -9.25rem;
+      bottom: 7.8125rem;
+      z-index: 1; }
+    .waimai-container .page2 .bear {
+      background-image: url("../image/page3/bear2.png");
+      background-size: 11.5rem 13.34375rem;
+      background-repeat: no-repeat;
+      background-position: -3.21875rem -3rem;
+      width: 7.09375rem;
+      height: 10.5rem;
+      position: absolute;
+      bottom: 9.6875rem;
+      left: 50%;
+      margin-left: -3.54688rem;
+      z-index: 1; }
+      .waimai-container .page2 .bear .face1 {
+        background: url("../image/page3/face1.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 3.1875rem;
+        height: 3.1875rem;
+        top: 0;
+        left: -3.1875rem; }
+      .waimai-container .page2 .bear .face2 {
+        background: url("../image/page3/face2.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 3.15625rem;
+        height: 3.1875rem;
+        top: -3.1875rem;
+        right: -1.57813rem; }
+      .waimai-container .page2 .bear .hand_left {
+        background: url("../image/page3/hand-left_.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 2.3125rem;
+        height: 2.40625rem;
+        top: 5.625rem;
+        left: 0.9375rem; }
+      .waimai-container .page2 .bear .hand_right {
+        background: url("../image/page3/hand-right.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 2.3125rem;
+        height: 2.40625rem;
+        top: 5.625rem;
+        right: 0.9375rem; }
+    .waimai-container .page2 .sphere {
+      width: 20rem;
+      height: 11.125rem;
+      background: url("../image/page3/sphere2.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -10rem;
+      width: 20rem;
+      height: 11.125rem;
+      bottom: 0; }
+    .waimai-container .page2 .table {
+      width: 16.0625rem;
+      height: 8.0625rem;
+      background: url("../image/page3/table.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -8.03125rem;
+      width: 16.0625rem;
+      height: 8.0625rem;
+      bottom: 4.375rem;
+      z-index: 2; }
+    .waimai-container .page2 .foob {
+      width: 11.0625rem;
+      height: 4.75rem;
+      background: url("../image/page3/foods.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -5.53125rem;
+      width: 11.0625rem;
+      height: 4.75rem;
+      bottom: 10.3125rem;
+      z-index: 3; }
+  .waimai-container .page3 {
+    background-color: #DD8A03; }
+    .waimai-container .page3 .bg {
+      width: 18.5rem;
+      height: 18.125rem;
+      background: url("../image/page4/bg5.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -9.25rem;
+      bottom: 9.375rem;
+      z-index: 1; }
+    .waimai-container .page3 .bear {
+      width: 6.4375rem;
+      height: 10.03125rem;
+      background: url("../image/page4/bear3.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -3.21875rem;
+      bottom: 6.09375rem;
+      z-index: 2; }
+    .waimai-container .page3 .sphere {
+      width: 20rem;
+      height: 11.125rem;
+      background: url("../image/page4/sphere3.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -10rem;
+      width: 20rem;
+      height: 11.125rem;
+      bottom: 0; }
+    .waimai-container .page3 .license {
+      background: url("../image/page4/license.png") no-repeat center/100% 100%;
+      position: absolute;
+      width: 6.15625rem;
+      height: 4.375rem;
+      left: 1.25rem;
+      bottom: 15.625rem;
+      z-index: 3; }
+    .waimai-container .page3 .oil {
+      background: url("../image/page4//oil.png") no-repeat center/100% 100%;
+      position: absolute;
+      width: 6.40625rem;
+      height: 3.34375rem;
+      left: 7.03125rem;
+      bottom: 20.625rem;
+      z-index: 3; }
+    .waimai-container .page3 .evil {
+      background: url("../image/page4/evil2.png") no-repeat center/100% 100%;
+      position: absolute;
+      width: 6.1875rem;
+      height: 5.09375rem;
+      right: 0.9375rem;
+      bottom: 15rem;
+      z-index: 3; }
+  .waimai-container .page4 {
+    background-color: #3FA100; }
+    .waimai-container .page4 .bg {
+      width: 18.375rem;
+      height: 10.40625rem;
+      background: url("../image/page5/bg6.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -9.1875rem;
+      bottom: 9.375rem;
+      z-index: 1; }
+    .waimai-container .page4 .bear {
+      width: 6.4375rem;
+      height: 10.03125rem;
+      background: url("../image/page5/bear4.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -3.21875rem;
+      bottom: 5.3125rem;
+      z-index: 2; }
+    .waimai-container .page4 .sphere {
+      width: 20rem;
+      height: 11.125rem;
+      background: url("../image/page5/sphere4.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -10rem;
+      width: 20rem;
+      height: 11.125rem;
+      bottom: 0; }
+    .waimai-container .page4 .card1 {
+      background: url("../image/page5/card1.png") no-repeat center/100% 100%;
+      position: absolute;
+      width: 5rem;
+      height: 5.46875rem;
+      left: 1rem;
+      bottom: 13.59375rem; }
+    .waimai-container .page4 .card2 {
+      background: url("../image/page5/card2.png") no-repeat center/100% 100%;
+      position: absolute;
+      width: 5.03125rem;
+      height: 6.53125rem;
+      left: 7.5rem;
+      bottom: 16.5625rem; }
+    .waimai-container .page4 .card3 {
+      background: url("../image/page5/card3.png") no-repeat center/100% 100%;
+      position: absolute;
+      width: 5.21875rem;
+      height: 5.75rem;
+      right: 1.40625rem;
+      bottom: 13.125rem; }
+  .waimai-container .page5 {
+    background-color: #0098CF; }
+    .waimai-container .page5 .bg {
+      width: 18.5625rem;
+      height: 15.40625rem;
+      background: url("../image/page6/bg7.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -9.28125rem;
+      bottom: 9.375rem;
+      z-index: 1; }
+    .waimai-container .page5 .bear {
+      width: 7.1875rem;
+      height: 12.1875rem;
+      background: url("../image/page6/rider2.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -3.59375rem;
+      bottom: 5.46875rem;
+      z-index: 2; }
+    .waimai-container .page5 .sphere {
+      width: 20rem;
+      height: 11.125rem;
+      background: url("../image/page6/sphere5.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -10rem;
+      width: 20rem;
+      height: 11.125rem;
+      bottom: 0; }
+    .waimai-container .page5 .clouds {
+      width: 13.5rem;
+      height: 5rem;
+      background: url("../image/page6/weather-cloud.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -6.75rem;
+      width: 13.5rem;
+      height: 5rem;
+      top: 7.5rem; }
+  .waimai-container .page6 {
+    background-color: #B527A0; }
+    .waimai-container .page6 .bg {
+      width: 18.375rem;
+      height: 10.40625rem;
+      background: url("../image/page7/bg8.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -9.1875rem;
+      bottom: 9.375rem;
+      z-index: 1; }
+    .waimai-container .page6 .bear {
+      width: 8.90625rem;
+      height: 10.25rem;
+      background: url("../image/page7/bear5.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -4.45313rem;
+      bottom: 6.25rem;
+      z-index: 2; }
+      .waimai-container .page6 .bear .gift1 {
+        background: url("../image/page7/gift1.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 1.21875rem;
+        height: 0.78125rem;
+        left: 50%;
+        top: 0;
+        margin-left: -0.60938rem;
+        transform: rotateZ(28deg) translateY(7.5rem); }
+      .waimai-container .page6 .bear .gift2 {
+        background: url("../image/page7/gift2.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 2.90625rem;
+        height: 2.46875rem;
+        left: 50%;
+        top: 0;
+        margin-left: -1.45313rem;
+        transform: rotateZ(56deg) translateY(7.5rem); }
+      .waimai-container .page6 .bear .gift3 {
+        background: url("../image/page7/gift3.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 2.25rem;
+        height: 2rem;
+        left: 50%;
+        top: 0;
+        margin-left: -1.125rem;
+        transform: rotateZ(84deg) translateY(7.5rem); }
+      .waimai-container .page6 .bear .gift4 {
+        background: url("../image/page7/gift4.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 2.84375rem;
+        height: 2.28125rem;
+        left: 50%;
+        top: 0;
+        margin-left: -1.42188rem;
+        transform: rotateZ(112deg) translateY(7.5rem); }
+      .waimai-container .page6 .bear .gift5 {
+        background: url("../image/page7/gift5.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 3.09375rem;
+        height: 2.03125rem;
+        left: 50%;
+        top: 0;
+        margin-left: -1.54688rem;
+        transform: rotateZ(140deg) translateY(7.5rem); }
+      .waimai-container .page6 .bear .gift6 {
+        background: url("../image/page7/gift6.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 3.34375rem;
+        height: 2.5rem;
+        left: 50%;
+        top: 0;
+        margin-left: -1.67188rem;
+        transform: rotateZ(168deg) translateY(7.5rem); }
+      .waimai-container .page6 .bear .gift7 {
+        background: url("../image/page7/gift7.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 3.34375rem;
+        height: 2.5rem;
+        left: 50%;
+        top: 0;
+        margin-left: -1.67188rem;
+        transform: rotateZ(196deg) translateY(7.5rem); }
+      .waimai-container .page6 .bear .gift8 {
+        background: url("../image/page7/gift8.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 2.75rem;
+        height: 2rem;
+        left: 50%;
+        top: 0;
+        margin-left: -1.375rem;
+        transform: rotateZ(224deg) translateY(7.5rem); }
+      .waimai-container .page6 .bear .gift9 {
+        background: url("../image/page7/gift9.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 2.4375rem;
+        height: 1.5625rem;
+        left: 50%;
+        top: 0;
+        margin-left: -1.21875rem;
+        transform: rotateZ(252deg) translateY(7.5rem); }
+      .waimai-container .page6 .bear .gift10 {
+        background: url("../image/page7/gift10.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 1.53125rem;
+        height: 1.15625rem;
+        left: 50%;
+        top: 0;
+        margin-left: -0.76563rem;
+        transform: rotateZ(280deg) translateY(7.5rem); }
+      .waimai-container .page6 .bear .gift11 {
+        background: url("../image/page7/gift11.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 1.59375rem;
+        height: 0.96875rem;
+        left: 50%;
+        top: 0;
+        margin-left: -0.79688rem;
+        transform: rotateZ(308deg) translateY(7.5rem); }
+      .waimai-container .page6 .bear .gift12 {
+        background: url("../image/page7/gift12.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 1.15625rem;
+        height: 0.71875rem;
+        left: 50%;
+        top: 0;
+        margin-left: -0.57813rem;
+        transform: rotateZ(336deg) translateY(7.5rem); }
+    .waimai-container .page6 .sphere {
+      width: 20rem;
+      height: 11.125rem;
+      background: url("../image/page7/sphere6.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -10rem;
+      width: 20rem;
+      height: 11.125rem;
+      bottom: 0; }
+  .waimai-container .page7 {
+    background-color: #19072A; }
+    .waimai-container .page7 .streetlight {
+      background: url("../image/page8/streetlight.png") no-repeat center/100% 100%;
+      position: absolute;
+      width: 2.5rem;
+      height: 13.84375rem;
+      left: 7.5rem;
+      bottom: 9.375rem;
+      z-index: 1; }
+      .waimai-container .page7 .streetlight .light {
+        background: url("../image/page8/lamplight.png") no-repeat center/100% 100%;
+        position: absolute;
+        width: 13.65625rem;
+        height: 13.34375rem;
+        top: 0.3125rem;
+        left: -4.375rem; }
+    .waimai-container .page7 .bear {
+      background: url("../image/page8/bear6.png") no-repeat center/100% 100%;
+      position: absolute;
+      width: 8.625rem;
+      height: 8.46875rem;
+      bottom: 8.75rem;
+      left: 7.8125rem;
+      z-index: 2; }
+    .waimai-container .page7 .motobike {
+      background: url("../image/page8/moto.png") no-repeat center/100% 100%;
+      position: absolute;
+      width: 6.25rem;
+      height: 4.28125rem;
+      bottom: 8.59375rem;
+      left: 3.59375rem;
+      z-index: 3; }
+    .waimai-container .page7 .share {
+      width: 11.84375rem;
+      height: 4.15625rem;
+      background: url("../image/page8/share.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -5.92188rem;
+      width: 11.84375rem;
+      height: 4.15625rem;
+      bottom: 4.375rem;
+      z-index: 4; }
+    .waimai-container .page7 .info {
+      position: absolute;
+      bottom: 2.1875rem;
+      width: 100%;
+      text-align: center;
+      font-size: 0.75rem;
+      z-index: 5;
+      color: #b579d6; }
+    .waimai-container .page7 .sphere {
+      width: 20rem;
+      height: 12rem;
+      background: url("../image/page8/sphere7.png") no-repeat center/100% 100%;
+      position: absolute;
+      left: 50%;
+      margin-left: -10rem;
+      width: 20rem;
+      height: 12rem;
+      bottom: 0; }
+
+.loading .progress .rate {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  background-color: red;
+  top: 0;
+  right: 0; }
+
+.loading.animate .rider {
+  animation: loading_rider 2s 0.5s linear forwards; }
+.loading.animate .progress .rate {
+  animation: loading_rate 2s 0.5s linear forwards; }
+
+@keyframes loading_rider {
+  0% {
+    transform: translateX(0rem) translateY(0); }
+  10% {
+    transform: translateX(-0.875rem) translateY(-10%); }
+  20% {
+    transform: translateX(-1.75rem) translateY(0); }
+  30% {
+    transform: translateX(-2.625rem) translateY(-10%); }
+  40% {
+    transform: translateX(-3.5rem) translateY(0); }
+  50% {
+    transform: translateX(-4.375rem) translateY(-10%); }
+  60% {
+    transform: translateX(-5.25rem) translateY(0); }
+  70% {
+    transform: translateX(-6.125rem) translateY(-10%); }
+  80% {
+    transform: translateX(-7rem) translateY(0); }
+  90% {
+    transform: translateX(-7.875rem) translateY(-10%); }
+  100% {
+    transform: translateX(-8.75rem) translateY(0); } }
+@keyframes loading_rate {
+  from {
+    width: 30%; }
+  to {
+    width: 100%; } }
+.welcome.animate .grass {
+  animation: welcome_grass 0.5s linear forwards; }
+.welcome.animate .small_grass {
+  opacity: 0;
+  animation: welcome_small_grass 0.5s 0.5s linear forwards; }
+.welcome.animate .trees {
+  opacity: 0;
+  animation: welcome_trees 0.8s 1s linear forwards; }
+.welcome.animate .circle {
+  opacity: 0;
+  animation: welcome_circle 0.5s 1.8s linear forwards; }
+  .welcome.animate .circle .circle_red {
+    animation: welcome_circle_red 0.5s 1.8s linear infinite; }
+.welcome.animate .rider_box {
+  transition: all 0.5s 2.3s linear;
+  opacity: 1;
+  transform: translateY(0); }
+  .welcome.animate .rider_box .welcome_rider {
+    animation: welcome_rider 0.5s 2.8s linear infinite; }
+  .welcome.animate .rider_box .jet {
+    opacity: 0;
+    animation: welcome_jet 0.5s 2.8s linear infinite; }
+.welcome.animate .clouds {
+  opacity: 0;
+  animation: welcome_clouds 0.5s 3.3s linear forwards; }
+.welcome.animate .theme_title {
+  opacity: 0;
+  animation: welcome_title 0.5s 3.8s linear forwards; }
+  .welcome.animate .theme_title .hello {
+    opacity: 0;
+    animation: wlecome_hello 0.5s 4.2s linear forwards; }
+
+@keyframes welcome_grass {
+  0% {
+    transform: translateY(80%); }
+  100% {
+    transform: translateY(0); } }
+@keyframes welcome_small_grass {
+  0% {
+    opacity: 0;
+    transform: scale(2, 1); }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1); } }
+@keyframes welcome_trees {
+  0% {
+    opacity: 0;
+    transform: translateY(20%); }
+  70% {
+    opacity: 0.8;
+    transform: translateY(-20%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@keyframes welcome_circle {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0); }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1); } }
+@keyframes welcome_circle_red {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+@keyframes welcome_rider_box {
+  0% {
+    opacity: 0;
+    transform: translateY(-150%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@keyframes welcome_rider {
+  0% {
+    transform: translateY(-20%); }
+  100% {
+    transform: translateY(0%); } }
+@keyframes welcome_jet {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0); }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1); } }
+@keyframes welcome_clouds {
+  0% {
+    opacity: 0;
+    transform: translateY(-80%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@keyframes welcome_title {
+  0% {
+    opacity: 0;
+    transform: translateY(-80%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
+@keyframes wlecome_hello {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0); }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1); } }
+.page1.animate .scroll_page1 .bg {
+  opacity: 0;
+  animation: page1_rotate 0.5s linear forwards,page1_rotate2 0.5s 1.5s linear forwards; }
+.page1.animate .scroll_page1 .person {
+  opacity: 0;
+  animation: page1_rotate 0.5s 0.3s linear forwards,page1_rotate2 0.5s 1.8s linear forwards; }
+.page1.animate .scroll_page1 .message_container {
+  opacity: 0;
+  animation: page1_text 0.5s 0.3s linear forwards,page1_text2 0.5s 1.8s linear forwards; }
+.page1.animate .scroll_page2 .bg {
+  opacity: 0;
+  animation: page1_rotate 0.5s 1.5s linear forwards,page1_rotate2 0.5s 3s linear forwards; }
+.page1.animate .scroll_page2 .person {
+  opacity: 0;
+  animation: page1_rotate 0.5s 1.8s linear forwards,page1_rotate2 0.5s 3.3s linear forwards; }
+.page1.animate .scroll_page2 .message_container {
+  opacity: 0;
+  animation: page1_text 0.5s 2.3s linear forwards,page1_text2 0.5s 3.3s linear forwards; }
+.page1.animate .scroll_page3 .bg {
+  opacity: 0;
+  animation: page1_rotate 0.5s 3s linear forwards; }
+.page1.animate .scroll_page3 .person {
+  opacity: 0;
+  animation: page1_rotate 0.5s 3.3s linear forwards; }
+.page1.animate .scroll_page3 .word1 {
+  animation: page1_shake 0.3s linear infinite; }
+.page1.animate .scroll_page3 .word2 {
+  animation: page1_shake 0.3s linear infinite; }
+.page1.animate .scroll_page3 .word3 {
+  animation: page1_shake 0.3s linear infinite; }
+.page1.animate .scroll_page3 .word4 {
+  animation: page1_shake 0.3s linear infinite; }
+.page1.animate .scroll_page3 .message_container {
+  opacity: 0;
+  animation: page1_text 0.5s 3.8s linear forwards; }
+
+@keyframes page1_rotate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg);
+    transform-origin: center 250%; }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+    transform-origin: center 250%; } }
+@keyframes page1_rotate2 {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+    transform-origin: center 250%; }
+  100% {
+    opacity: 0;
+    transform: rotate(-45deg);
+    transform-origin: center 250%; } }
+@keyframes page1_shake {
+  0% {
+    transform: translateY(-5%); }
+  100% {
+    transform: translateY(5%); } }
+@keyframes page1_text {
+  0% {
+    opacity: 0;
+    transform: rotate(90deg);
+    transform-origin: right bottom; }
+  50% {
+    opacity: 1;
+    transform: rotate(-10deg);
+    transform-origin: right bottom; }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+    transform-origin: right bottom; } }
+@keyframes page1_text2 {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+    transform-origin: right bottom; }
+  50% {
+    opacity: 1;
+    transform: rotate(10deg);
+    transform-origin: right bottom; }
+  100% {
+    opacity: 0;
+    transform: rotate(-90deg);
+    transform-origin: right bottom; } }
+.page2.animate .bg {
+  animation: page1_rotate 0.5s linear forwards; }
+.page2.animate .table {
+  opacity: 0;
+  animation: page2_dropOut 0.5s 0.5s linear forwards; }
+.page2.animate .bear {
+  opacity: 0;
+  animation: page2_up 0.5s 1s linear forwards; }
+  .page2.animate .bear .face1 {
+    opacity: 0;
+    animation: page2_scale 1s 1.5s linear forwards; }
+  .page2.animate .bear .face2 {
+    opacity: 0;
+    animation: page2_scale 1s 1.5s linear forwards; }
+  .page2.animate .bear .hand_left {
+    animation: page2_shake 0.2s linear infinite; }
+  .page2.animate .bear .hand_right {
+    animation: page2_shake 0.2s 0.3s linear infinite; }
+.page2.animate .foob {
+  opacity: 0;
+  animation: page2_dropOut 0.5s 1s linear forwards; }
+
+@keyframes page2_dropOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-200%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@keyframes page2_up {
+  0% {
+    opacity: 0;
+    transform: translateY(200%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@keyframes page2_scale {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0); }
+  50% {
+    opacity: 1;
+    transform: scale(1.2, 1.2); }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1); } }
+@keyframes page2_shake {
+  0% {
+    transform: translateY(-5%); }
+  100% {
+    transform: translateY(5%); } }
+.page3.animate .bg {
+  animation: page1_rotate 0.5s linear forwards; }
+.page3.animate .bear {
+  opacity: 0;
+  animation: page2_dropOut 0.5s 0.5s linear forwards; }
+.page3.animate .license {
+  opacity: 0;
+  animation: page2_scale 1s 1.5s linear forwards; }
+.page3.animate .oil {
+  opacity: 0;
+  animation: page2_scale 1s 1.5s linear forwards; }
+.page3.animate .evil {
+  opacity: 0;
+  animation: page2_scale 1s 1.5s linear forwards; }
+
+.page3.active .bear {
+  animation: page3_active 3s steps(1) forwards; }
+.page3.active .license {
+  animation: page3_active1 1s 0s steps(1) forwards, page3_out 1s 3.5s forwards, page3_show_hide 1s 5s forwards; }
+.page3.active .oil {
+  animation: page3_active2 2s 0s steps(1) forwards, page3_out 1s 3.5s forwards, page3_show_hide 1s 5s forwards; }
+.page3.active .evil {
+  animation: page3_active3 3s 0s steps(1) forwards, page3_out 1s 3.5s forwards, page3_show_hide 1s 5s forwards; }
+
+@keyframes page3_active {
+  0% {
+    opacity: 1;
+    background-image: url("../image/page4/bear3.png"); }
+  33% {
+    opacity: 1;
+    background-image: url("../image/page4/bear3-1-1.png"); }
+  66% {
+    opacity: 1;
+    background-image: url("../image/page4/bear3-2-1.png"); }
+  100% {
+    opacity: 1;
+    background-image: url("../image/page4/bear3-3-1.png"); } }
+@keyframes page3_active1 {
+  form {
+    opacity: 1;
+    background-image: url("../image/page4/license.png"); }
+  to {
+    opacity: 1;
+    background-image: url("../image/page4/license1.png"); } }
+@keyframes page3_active2 {
+  form {
+    opacity: 1;
+    background-image: url("../image/page4/evil2.png"); }
+  to {
+    opacity: 1;
+    background-image: url("../image/page4/evil21.png"); } }
+@keyframes page3_active3 {
+  form {
+    opacity: 1;
+    background-image: url("../image/page4/oil.png"); }
+  to {
+    opacity: 1;
+    background-image: url("../image/page4/oil1.png"); } }
+@keyframes page3_out {
+  0% {
+    opacity: 1;
+    transform: translateY(0%); }
+  100% {
+    transform: translateY(300%); } }
+@keyframes page3_show_hide {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0); }
+  50% {
+    opacity: 1;
+    transform: scale(1.5, 1.5); }
+  100% {
+    opacity: 0;
+    transform: scale(0, 0); } }
+
+/*# sourceMappingURL=index_main.css.map */
